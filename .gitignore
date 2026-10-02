@@ -3,3 +3,5 @@ out/
 renders/
 .DS_Store
 .env
+snapshots/
+.hyperframes/
