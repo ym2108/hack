@@ -10,4 +10,5 @@ When the user gives a script, ask which engine they want if they haven't said; d
 Rules:
 - The sandbox network blocks CDNs (e.g. cdn.jsdelivr.net). Vendor any JS/CSS/fonts into `hyperframes/assets/` (pull from npm via `npm pack`) instead of linking a CDN.
 - Chrome comes from `REMOTION_BROWSER_EXECUTABLE` / `HYPERFRAMES_BROWSER_PATH` (set by the SessionStart hook). Don't run `npx hyperframes browser ensure` or let Remotion download Chrome in the cloud.
+- Optional extras (whisper.cpp, Kokoro TTS, MusicGen) install with `scripts/install-extras.sh`. Kokoro works in the cloud sandbox; Whisper and MusicGen need huggingface.co, which the sandbox network blocks unless it's been allowlisted.
 - Render outputs go in `out/` (gitignored). Commit source, not MP4s, unless asked.

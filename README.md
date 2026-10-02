@@ -32,6 +32,19 @@ npm run render   # -> MP4
 The composition lives in `hyperframes/index.html`. GSAP is vendored at
 `hyperframes/assets/vendor/gsap.min.js` so renders work offline.
 
+### Optional extras (transcription, voiceover, music)
+
+```bash
+scripts/install-extras.sh              # whisper.cpp + Kokoro TTS + MusicGen
+scripts/install-extras.sh whisper tts  # or pick: whisper | tts | music
+```
+
+| Extra | Powers | Model weights come from |
+| --- | --- | --- |
+| whisper.cpp | `hyperframes transcribe`, captions | huggingface.co |
+| Kokoro | `hyperframes tts "text" -o voice.wav` | github.com |
+| MusicGen | locally generated background music | huggingface.co |
+
 ## AI agent skills
 
 Agent skills for both engines are committed in `.claude/skills/`
